@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Perbandingan</title>
+</head>
+<body>
+  <body>
+    <input type="number" id="x" placeholder="Masukkan Nilai x">
+    <input type="number" id="y" placeholder="Masukkan Nilai y">
+    <button onclick="banding()">KLIK</button>
+    <script>
+        function banding() {
+        var x = document.getElementById('x').value;
+        var y = document.getElementById('y').value;
+    if (x>y) {
+        alert(x+' lebih besar dari  '+y);
+    } else {
+        alert(y+' lebih besar dari  '+x);  
+    }
+}
+    </script>    
+</body>
+</html>

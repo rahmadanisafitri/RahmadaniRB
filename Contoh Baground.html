@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>drake mode </title>
+</head>
+<body>
+    <center>
+        <h2>DRAKE MODE</h2>
+    </center>
+    <script>
+        function changeBG() {
+    var selectedBGColor = document.getElementById("bgchoice").value;
+    document.body.style.backgroundColor = selectedBGColor;
+    }
+    </script>
+    <select id="bgchoice" onchange="changeBG()">
+          <option>WARNA</option>
+        <option value="blue">Biru</option>
+        <option value="pink">pink</option>
+        <option value="black">hitam</option>
+        <option value="lightgreen">hijau</option>
+        <option value="gray">abu abu</option>
+    </select>
+</body>
+</html>

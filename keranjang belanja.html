@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keranjang belanja</title>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"href="style.css"
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Keranjang Belanja</title>
+  <body>
+    <h1 style="text-align: center; margin-top: 20px">Keranjang Belanja</h1>
+    <div class="container" style="border-radius: 15px; border: 2px solid rgb(14, 13, 14)"></div>
+    <br />
+    <div class="container">
+      <form class="row g-3">
+        <div class="col-auto">
+          <label for="persegi" class="visually-hidden">JERUK</label>
+          <input type="text" readonly class="form-control-plaintext" id="nama jeruk" value="JERUK" />
+        </div>
+        <div class="col-6">
+          <label for="inputjeruk" class="visually-hidden">buah jeruk</label>
+          <input type="number" class="form-control" id="inputjeruk" placeholder="Jumlah Jeruk" />
+        </div>
+       
+      </form>
+      <hr />
+      <form class="row g-3">
+        <div class="col-auto">
+          <label for="persegipanjang" class="visually-hidden">mangga</label>
+          <input type="text" readonly class="form-control-plaintext" id="persegipanjang" value="MANGGA" />
+        </div>
+        <div class="col-6">
+          <label for="inputmangga" class="visually-hidden">panjang</label>
+          <input type="number" class="form-control" id="inputmangga" placeholder="Jumlah Mangga" /><br />
+        </div>
+      </form>
+      <hr />
+      <form class="row g-3">
+        <div class="col-auto">
+          <label for="lingkaran" class="visually-hidden">Durian</label>
+          <input type="text" readonly class="form-control-plaintext" id="lingkaran" value="DURIAN" />
+        </div>
+        <div class="col-6">
+          <label for="inputdurian" class="visually-hidden">jumlah durian</label>
+          <input type="number" class="form-control" id="inputdurian" placeholder="Jumlah Durian" />
+        </div>
+      <hr />
+      <form class="row g-3">
+        <div class="col-auto">
+          <label for="segitiga" class="visually-hidden">Pepaya</label>
+          <input type="text" readonly class="form-control-plaintext" id="pepaya" value="PEPAYA" />
+        </div>
+        <div class="col-6">
+          <label for="inputSegitiga" class="visually-hidden">BUAH PEPAYA</label>
+          <input type="number" class="form-control" id="inputpepaya" placeholder="Jumlah Pepaya" /><br />
+        </div>
+        <form class="row g-3">
+          <div class="col-auto">
+            <label for="segitiga" class="visually-hidden">diskon</label>
+            <input type="text" readonly class="form-control-plaintext" id="segitiga" value="DISKON" />
+          </div>
+    <div class="col-6">
+        <label for="inputSegitiga" class="visually-hidden">jumlah diskon</label>
+        <input type="number" class="form-control" id="inputdiskon" placeholder="Diskon" /><br />
+    </div>
+        <div class="col-auto">
+          <button type="button" class="btn btn-primary mb-3" onclick="bayar()">Hitung</button>
+        </div>
+        <hr />
+      </form>
+      <br />
+       <div>
+      <h4 id="totalharga">Total Harga </h4>
+      <h4 id="diskon"> </h4>
+      <h4 id="totalbayar"> </h4>
+       </div>
+    </div>
+    
+    <script>
+        function bayar() {
+            var jeruk = parseInt(document.getElementById('inputjeruk').value);
+            var mangga = parseInt(document.getElementById('inputmangga').value);
+            var durian = parseInt(document.getElementById('inputdurian').value);
+            var pepaya = parseInt(document.getElementById('inputpepaya').value);
+            var totalharga = jeruk * 2000 + mangga * 5000 + durian * 20000 + pepaya * 3000
+            console.log(totalharga);7
+            var diskon = parseInt(document.getElementById('inputdiskon').value);
+            var diskonAkhir = diskon / 100;
+            var hargaDiskon = totalharga * diskonAkhir;
+            var hargaAkhir = totalharga - hargaDiskon;
+            var totalTampil = document.getElementById('totalbayar');
+            totalTampil.innerHTML = hargaAkhir;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+</script>
+  </body>
+  </head>

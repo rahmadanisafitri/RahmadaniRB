@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IF ABCDE</title>
+</head>
+<body>
+    <CENTER>
+        <h2>MENENTUKAN NILAI</h2>
+    </CENTER>
+    <input type="number" name="" id="nilai" placeholder="Masukkkan nilai">
+            <button onclick="hasil()">KLIK</button>
+    <script>
+        function hasil() {
+        var nilai = document.getElementById('nilai').value;
+   
+        if (nilai <= 60) {
+            alert('E')
+        }else if (nilai >= 61 && nilai <= 70){
+            alert('D')
+        }else if (nilai >= 71 && nilai <= 80){
+            alert('C')
+        }else if (nilai >= 81 && nilai <= 90){
+            alert('B')
+        }else if (nilai >= 91 && nilai <= 100){
+            alert('A')
+        }else {
+        alert('MODAR RAISO!');
+    }
+}
+    </script>
+</body>
+</html>
